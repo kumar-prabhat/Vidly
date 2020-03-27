@@ -1,0 +1,20 @@
+﻿.navbar {
+    width: 100%;
+}
+
+.nav-link {
+    font-weight: bold;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+
+.nav-item {
+    padding: 0 1rem;
+}
+
+body {
+    padding: 0
+}

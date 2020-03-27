@@ -1,0 +1,37 @@
+﻿@model Vidly.ViewModels.RandomMovieViewModel
+@{
+    ViewBag.Title = "Movies";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    var className = Model.Movie.Count > 1 ? "popular" : null;
+}
+<h2 class="@className">Movies</h2>
+@if (Model.Movie.Count == 0)
+{
+    <text>Currently no movies are available.</text>
+}
+else
+{
+
+    <div class="container">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th class="text-center" style="border: 1px solid black;">Id</th>
+                    <th style="border: 1px solid black;">Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var movie in Model.Movie)
+                {
+                    <tr>
+                        <td class="text-center" style=" border: 1px solid black;">@movie.Id</td>
+                        <td style=" border: 1px solid black;"><a href="/movies/details/@movie.Id" style=" color: black">@movie.Name</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
