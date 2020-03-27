@@ -1,20 +1,25 @@
-﻿ <div class="navbar navbar-inverse navbar-fixed-top">
-     <div class="container">
-         <div class="navbar-header">
-             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                 <span class="icon-bar"></span>
-                 <span class="icon-bar"></span>
-                 <span class="icon-bar"></span>
-             </button>
-             @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-         </div>
-         <div class="navbar-collapse collapse">
-             <ul class="nav navbar-nav">
-                 <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                 <li>@Html.ActionLink("About", "About", "Home")</li>
-                 <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-             </ul>
-         </div>
-     </div>
-  </div>
+﻿<div class="container-fluid bg-dark">
+    <div class="container">
+        <div class="row">
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark navbar-fixed-top">
+                <!-- Brand -->
+                <a class="navbar-brand" href="/home/index">Vidly</a>
 
+                <!-- Toggler/collapsibe Button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">@Html.ActionLink("Movies", "Random", "Movies", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li class="nav-item">@Html.ActionLink("Customer", "Random", "Customers", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li class="nav-item"><a href="#" class="nav-link">Register</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Log in</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
